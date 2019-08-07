@@ -1,8 +1,8 @@
 import AbstractVideo from 'zombiebox/zb/device/abstract-video';
 import Rect from 'zombiebox/zb/geometry/rect';
-import IViewPort from 'zombiebox/zb/device/interfaces/i-view-port';
-import TaskManager, { TaskCreator } from './task-manager';
 import IInfo from 'zombiebox/zb/device/interfaces/i-info';
+import ViewPort from './view-port';
+import TaskManager, { TaskCreator } from './task-manager';
 
 export default class Video extends AbstractVideo {
   public EVENT_PLUGIN_OPEN: string;
@@ -30,7 +30,7 @@ export default class Video extends AbstractVideo {
   protected _play(): void;
   protected _seekTo(position: number): Promise<void>;
   protected _asyncPrepare(): Promise<void>;
-  protected _createViewPort(containerRect: Rect): IViewPort;
+  protected _createViewPort(containerRect: Rect): ViewPort;
   protected _createSuspendTask(): TaskCreator;
   protected _createStopTask(): TaskCreator;
   protected _createPlayTask(url: string, opt_position?: number): TaskCreator;
