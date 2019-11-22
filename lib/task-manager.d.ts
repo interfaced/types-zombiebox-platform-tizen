@@ -1,6 +1,6 @@
 export default class TaskManager {
   constructor();
-  public addTask(creator: TaskCreator, type: TaskType): void;
+  addTask(creator: TaskCreator, type: TaskType): void;
   protected _startNextTask(): void;
 }
 
