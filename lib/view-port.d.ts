@@ -9,8 +9,8 @@ export default class ViewPort extends AbstractViewPort {
   protected _tizenVersion: string;
   protected _displayRatio: number;
   constructor(containerRect: Rect, plugin: any, videoObject: HTMLObjectElement, osdResolution: Resolution, version: string);
-  public updateViewPort(): void;
-  public isAspectRatioSupported(ratio: AspectRatio): boolean;
-  public hasAspectRatioFeature(): boolean;
-  public hasAreaChangeFeature(): boolean;
+  updateViewPort(): void;
+  isAspectRatioSupported(ratio: AspectRatio): boolean;
+  hasAspectRatioFeature(): boolean;
+  hasAreaChangeFeature(): boolean;
 }
