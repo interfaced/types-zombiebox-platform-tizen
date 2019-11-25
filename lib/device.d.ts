@@ -30,4 +30,5 @@ export default class Device extends AbstractDevice {
   getLaunchParams(): object;
   protected _onAppControl(): void;
   protected _updateScreensaverState(event: string, newState: State): void;
+  static detect(): boolean;
 }
