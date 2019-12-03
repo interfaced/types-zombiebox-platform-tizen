@@ -2,11 +2,13 @@ import Rect from 'zombiebox/zb/geometry/rect';
 import { State } from 'zombiebox/zb/device/interfaces/i-video';
 import AbstractDevice from 'zombiebox/zb/device/abstract-device';
 import Info from './info';
+import Input from './input';
 import StatefulVideo from './stateful-video';
 import Video from './video';
 
 export default class Device extends AbstractDevice {
   info: Info;
+  input: Input;
   protected _tizen: any;
   protected _webapis: any;
   EVENT_APP_CONTROL: string;
