@@ -3,6 +3,8 @@ import { PrepareOption, State } from 'zombiebox/zb/device/interfaces/i-stateful-
 import Rect from 'zombiebox/zb/geometry/rect';
 import ViewPort from './view-port';
 import Info from './info';
+import { Type as DRMType } from 'zombiebox/zb/device/drm/drm';
+import IDRMClient from 'zombiebox/zb/device/interfaces/i-drm-client';
 
 export default class StatefulVideo extends AbstractStatefulVideo {
     constructor(rect: Rect, info: Info);
@@ -22,4 +24,8 @@ export default class StatefulVideo extends AbstractStatefulVideo {
     setMuted(muted: boolean): void;
     getVolume(): number;
     setVolume(volume: number): void;
+    attachDRM(client: IDRMClient): void;
+    detachDRM(type: DRMType): void;
+    static isDRMSupported(type: DRMType): boolean;
+    static canHandleMultiDRM(): boolean;
 }
