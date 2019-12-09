@@ -6,7 +6,7 @@ export default class BaseDrmHook extends EventPublisher {
     type: Type | string;
     EVENT_ERROR: string;
     constructor(client: IDrmClient);
-    prepare(): Promise<undefined>;
-    destroy(): Promise<undefined>;
+    prepare(): Promise<any>;
+    destroy(): Promise<any>;
     onAVPlayEvent(data: Object): void;
 }
