@@ -28,7 +28,7 @@ export default class StatefulVideo extends AbstractStatefulVideo {
 	getUrl(): string;
 	getViewport(): ViewPort;
 	attachDRM(client: IDRMClient): void;
-	detachDRM(type: DRMType): void;
+	detachDRM(type: DRMType): Promise<any>;
 	getEngine(): any;
 	static isDRMSupported(type: DRMType): boolean;
 	static canHandleMultiDRM(): boolean;
