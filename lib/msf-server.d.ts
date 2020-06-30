@@ -12,9 +12,9 @@ export default class MSFServer extends EventPublisher {
 	EVENT_CLIENT_DISCONNECTED: string;
 	EVENT_ERROR: string;
 	sendEvent(target: string | any, event: string, message?: any | undefined): void;
-	onRemoteEvent(event: string, callback: (arg0: any, arg1: any) => ): void;
-	offRemoteEvent(event: string, callback: (arg0: any, arg1: any) => ): void;
-	onceRemoteEvent(event: string, callback: (arg0: any, arg1: any) => ): void;
+	onRemoteEvent(event: string, callback: (arg0: any, arg1: any) => void): void;
+	offRemoteEvent(event: string, callback: (arg0: any, arg1: any) => void): void;
+	onceRemoteEvent(event: string, callback: (arg0: any, arg1: any) => void): void;
 	start(channelName: string): Promise<any>;
 	protected _createLocalService(): Promise<any>;
 	protected _bindListeners(): void;
