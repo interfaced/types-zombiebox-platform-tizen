@@ -19,8 +19,8 @@ export default class StatefulVideo extends AbstractStatefulVideo {
 	getDuration(): number;
 	getVolume(): number;
 	setVolume(volume: number): void;
-	volumeUp(step: number): any;
-	volumeDown(step: number): any;
+	volumeUp(step?: number): any;
+	volumeDown(step?: number): any;
 	getMuted(): boolean;
 	setMuted(muted: boolean): void;
 	getPlaybackRate(): number;
